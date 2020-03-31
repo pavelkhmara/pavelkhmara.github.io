@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Угадай слово</title>
+</head>
+<body>
+<h1>Угадывай слово по буквам</h1>
+<button onclick="game()">start</button>
+<script type="text/javascript">
+	function game() {
+
+		let start=confirm("Начнем игру? Нажмите Ок для старта или Отмена для выхода.");
+		if (start) {
+
+		// Создам массив со словами
+		let words=[
+		"программа","макака","зной","калибри","пистолет","одиннадцать","калифорния","экзамен"
+		];
+		// Выбираем случайное слово
+		let word=words[Math.floor(Math.random()*words.length)];
+
+		//Создаем итоговый массив
+		let answerArray=[];
+		for (let i=0;i< word.length;i++){
+			answerArray[i]="_";
+		}
+
+		let remainingLetters=word.length;
+
+		//Игровой цикл
+		while (remainingLetters>0){
+			//Показываем состояние игры
+			alert(answerArray.join(" "));
+
+			//Запрашиваем вариант ответа
+			let guess=prompt("Угадывай букву, или жми Отмена для выхода из игры.");
+			if (guess===null) {
+				//Выходим из игрового цикла
+				break;
+			}	else if (guess.length!==1) {
+				alert("Пожалуйста, введи одиночную букву.");
+			}	else {
+				// Обновляем состояние игры
+				for (var j = 0; j < word.length; j++) {
+					if (word[j]===guess) {
+						answerArray[j]=guess;
+						remainingLetters--;
+					}
+				}
+			}
+			//Конец игрового цикла
+		}
+
+		// Отображаем позднавление и ответ
+		alert(answerArray.join(" "));
+		alert("Отлично! Было загадано слово "+word);
+
+		// СЮДА ДОБАВЛЮ ВОПРОС ПРОДЛЖАЕМ?
+
+		} else {
+			alert(":( Поиграем в другой раз.");
+		}
+	//end function
+	};
+</script>
+</body>
+</html>
