@@ -1,0 +1,91 @@
+CREATE DATABASE `site` DEFAULT CHARACTER SET cp1251 COLLATE cp1251_general_ci;
+
+CREATE TABLE `user` (
+  `id_user` mediumint(9) auto_increment,
+  `email` char(50),
+  `passw` char(32),
+  `status_user` enum('y','n'),
+  PRIMARY KEY (`id_user`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=MyISAM DEFAULT CHARSET=cp1251;
+
+CREATE TABLE `rubr` (
+  `id_rubr` smallint(6) auto_increment,
+  `name_rubr` char(150),
+  PRIMARY KEY (`id_rubr`)
+) ENGINE=MyISAM DEFAULT CHARSET=cp1251;
+
+CREATE TABLE `site` (
+  `id_site` mediumint(9) auto_increment,
+  `id_rubr` smallint(6),
+  `id_user` mediumint(9),
+  `url_site` char(255),
+  `url_site_dop` char(255),
+  `title` char(80),
+  `descr` text,
+  `status_site` enum('y','n','s'),
+  `iq_site` smallint(6),
+  `add_date` date,
+  PRIMARY KEY (`id_site`),
+  KEY id_rubr (`id_rubr`),
+  KEY url_site_dop (`url_site_dop`)
+) ENGINE=MyISAM DEFAULT CHARSET=cp1251;
+
+CREATE TABLE `gbook` (
+  `id_msg` smallint(6) auto_increment,
+  `author` char(55),
+  `msg` text,
+  `msg_date` datetime,
+  `msg_new` enum('y','n'),
+  PRIMARY KEY (`id_msg`)
+) ENGINE=MyISAM DEFAULT CHARSET=cp1251;
+
+INSERT INTO `rubr` (`id_rubr`, `name_rubr`) VALUES 
+(NULL, 'Автомобили'),
+(NULL, 'Безопасность'),
+(NULL, 'Бытовая техника'),
+(NULL, 'Города и регионы'),
+(NULL, 'Гостиницы'),
+(NULL, 'Знакомства'),
+(NULL, 'Игры'),
+(NULL, 'Интернет'),
+(NULL, 'Искусство'),
+(NULL, 'Каталоги'),
+(NULL, 'Кино'),
+(NULL, 'Компании'),
+(NULL, 'Компьютеры'),
+(NULL, 'Кулинария'),
+(NULL, 'Литература'),
+(NULL, 'Магазины On-Line'),
+(NULL, 'Мебель'),
+(NULL, 'Медицина'),
+(NULL, 'Мобильные телефоны'),
+(NULL, 'Мода'),
+(NULL, 'Музыка'),
+(NULL, 'Наука'),
+(NULL, 'Недвижимость'),
+(NULL, 'Непознанное'),
+(NULL, 'Образование'),
+(NULL, 'Окна и двери'),
+(NULL, 'Подарки и праздники'),
+(NULL, 'Политика'),
+(NULL, 'Природа'),
+(NULL, 'Провайдеры'),
+(NULL, 'Продукты питания'),
+(NULL, 'Работа'),
+(NULL, 'Развлечения'),
+(NULL, 'Разное'),
+(NULL, 'Реклама'),
+(NULL, 'Сервисы'),
+(NULL, 'СМИ'),
+(NULL, 'Спорт'),
+(NULL, 'Страхование'),
+(NULL, 'Строительство'),
+(NULL, 'Театр'),
+(NULL, 'Товары и услуги'),
+(NULL, 'Транспорт'),
+(NULL, 'Туризм'),
+(NULL, 'Финансовые услуги'),
+(NULL, 'Фото'),
+(NULL, 'Хобби'),
+(NULL, 'Юридические услуги');
