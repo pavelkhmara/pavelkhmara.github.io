@@ -1,0 +1,99 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+h1 {
+  margin: 30px 20px;
+}
+
+h2 {
+  margin: 0 20px 50px 20px;
+  max-width: 600px;
+}
+
+.input-rect {
+  max-width: 600px;
+  margin: 0 20px;
+  border: solid 3px #1376F4;
+  border-radius: 10px;
+  padding: 10px 10px 30px;
+}
+
+p {
+  text-align: center;
+}
+
+.color-rect {
+  width: 150px;
+  height: 80px;
+  border-radius: 5px;
+  box-shadow: 2px 5px 10px #ccc;
+  position: relative;
+}
+
+.color-rect p {
+  background-color: rgba(213, 213, 213, 0.5);
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #303030;
+  padding: 20px;
+  line-height: 14px;
+  position: absolute;
+  right: 0;
+  top: -24px;
+  cursor: pointer;
+  display: none;
+}
+
+#FF5733 {
+  background-color: #FF5733;
+}
+
+#F47913 {
+  background-color: #F47913;
+}
+
+#F4EA13 {
+  background-color: #F4EA13;
+}
+
+#_8ef413 {
+  background-color: #8ef413;
+}
+
+#_13F465 {
+  background-color: #13f465;
+}
+
+#_13F4CB {
+  background-color: #13F4CB;
+}
+
+#_13B3F4 {
+  background-color: #13B3F4;
+}
+
+#_1376F4 {
+  background-color: #1376F4;
+}
+
+#_7913F4 {
+  background-color: #7913F4;
+}
+
+#E313F4 {
+  background-color: #E313F4;
+}
+
+.rectangleWrapper {
+  padding: 50 50 0 50;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.rectangleWrapper div {
+  padding: 20px;
+}

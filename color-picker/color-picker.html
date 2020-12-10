@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Color Picker</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <h1>Color Picker Page</h1>
+      <h2>There are rectangles with bright colors of the rainbow. It's pretty)</h2>
+      <div id="div1"></div>
+      <div class="input-rect">
+        <h3>Input your colorful rectangle</h3>
+        <form class="form" name="form" action="" method="">
+          Введите ваше имя:
+          <input type="text" id="txt1"><br>
+          Введите вашу фамилию: 
+          <input type="text" id="txt2"><br>
+          <label for="color">Choose color of rect</label>
+          <input type="color" name="color" value="#cccccc"></br>
+          <input type="button" name="button" onclick="addRect()" value="Add"></br>
+          <input type="button" value="Сохранить" onclick="saveCookies()"><br>
+<input type="button" value="Удалить cookies" onclick="deleteCookies()">
+
+        </form>
+      </div>
+    </div>
+
+    <div class="rectangleWrapper">
+      <div>
+        <div class="color-rect" id="FF5733" onmouseenter="displayCloser(event)" onmouseleave="noneCloser(event)"><p >x</p></div>
+        <p>#FF5733</p>
+      </div>
+      <div>
+        <div class="color-rect" id="F47913" onmouseenter="displayCloser(event)" onmouseleave="noneCloser(event)"><p>x</p></div>
+        <p>#F47913</p>
+      </div>
+      <div>
+        <div class="color-rect" id="F4EA13" onmouseenter="displayCloser(event)" onmouseleave="noneCloser(event)"><p>x</p></div>
+        <p>#F4EA13</p>
+      </div>
+      <div>
+        <div class="color-rect" id="_8ef413" onmouseenter="displayCloser(event)" onmouseleave="noneCloser(event)"><p>x</p></div>
+        <p>#8EF413</p>
+      </div>
+      <div>
+        <div class="color-rect" id="_13F465" onmouseenter="displayCloser(event)" onmouseleave="noneCloser(event)"><p>x</p></div>
+        <p>#13F465</p>
+      </div>
+      <div>
+        <div class="color-rect" id="_13F4CB" onmouseenter="displayCloser(event)" onmouseleave="noneCloser(event)"><p>x</p></div>
+        <p>#13F4CB</p>
+      </div>
+      <div>
+        <div class="color-rect" id="_13B3F4" onmouseenter="displayCloser(event)" onmouseleave="noneCloser(event)"><p>x</p></div>
+        <p>#13B3F4</p>
+      </div>
+      <div>
+        <div class="color-rect" id="_1376F4" onmouseenter="displayCloser(event)" onmouseleave="noneCloser(event)"><p>x</p></div>
+        <p>#1376F4</p>
+      </div>
+      <div>
+        <div class="color-rect" id="_7913F4" onmouseenter="displayCloser(event)" onmouseleave="noneCloser(event)"><p>x</p></div>
+        <p>#7913F4</p>
+      </div>
+      <div>
+        <div class="color-rect" id="E313F4" onmouseenter="displayCloser(event)" onmouseleave="noneCloser(event)"><p>x</p></div>
+        <p>#E313F4</p>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
