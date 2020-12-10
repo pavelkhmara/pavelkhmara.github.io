@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Color Picker</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <h1>Color Picker Page</h1>
+      <h2>There are rectangles with bright colors of the rainbow. It's pretty)</h2>
+
+      <div class="input-rect">
+        <h3><span id="div1"></span>Input your colorful rectangle</h3>
+        <form class="form" name="form" action="" method="">
+          Введите ваше имя:
+          <input type="text" id="txt1"><br>
+          Введите вашу фамилию:
+          <input type="text" id="txt2"><br>
+          <input type="button" value="Сохранить имя" onclick="saveCookies()">
+          <input type="button" value="Удалить имя" onclick="deleteCookies()"></br></br>
+          <label for="color">Choose color of rect</label>
+          <input type="color" name="color" value="#cccccc">
+          <input type="button" name="button" onclick="putColor()" value="Add">
+          <input type="button" value="Defult Rects"  onclick="showDefautRects()"><br>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="rectangleWrapper"></div>
+  </main>
+  <footer></footer>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
