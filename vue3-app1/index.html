@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Vue3 first App</title>
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="app" v-cloak>
+    <div class="card">
+      <h1 :style="{
+        fontSize: inputValue.length < 8 ? '2rem' : '1.5rem',
+      }" :class="{
+        'pk-darkblue': true,
+        'pk-primary': inputValue.length > 5
+      }
+      ">{{ title }}</h1>
+      <div class="form-control">
+        <input
+          type="text"
+          :placeholder="placeholderString"
+          v-model="inputValue"
+          @keypress.enter="addNewNote"
+        />
+      </div>
+      <button class="btn" @click="addNewNote">Add Item</button>
+      <hr />
+      <ul class="list" v-if="notes.length !== 0">
+        <li class="list-item" v-for="(myNote, index) in notes">
+          <span :class="notes.length > 9 ? 'bold' : 'primary'">
+            {{ index + 1 }}. {{ editToUpperCase(myNote) }}
+          </span>
+          <button class="btn danger" @click="deleteNote(index)">Delete</button>
+        </li>
+        <hr />
+        <li>
+          <strong>Total Notes: {{ notes.length }}</strong> | Doubled Total: {{ doubleCountComputed }}
+        </li>
+      </ul>
+      <div v-else>List is empey Please, add a note</div>
+    </div>
+  </div>len
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+</html>
