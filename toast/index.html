@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link href="src/css/fontawesome-free-5.15.2-web/css/all.css" rel="stylesheet">
+    <script defer src="src/css/fontawesome-free-5.15.2-web/js/all.js"></script> <!--load all styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/toast.css">
+
+    <title>Komunikaty!</title>
+  </head>
+  <body>
+    <div class="jumbotron bg-primary text-white jumbotron-fluid">
+        <div class="container">
+            <h1 class="text-center display-4">Toast Example</h1>
+            <h3 class="text-center">Jako przykład komunikatów</h3>
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <button class="snack btn btn-primary">Krótki (Nagłówek)</button>
+        <button class="toast-btn btn btn-primary">Duży z treśćą</button>
+    </div>
+
+    <div id="toast-container" class="toast-container bottom-right" aria-live="polite" aria-atomic="true">
+
+        <!-- 1 Example of toast -->
+        <div id="toast-99" class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" >
+            <div class="toast-header bg-info text-white">
+                <!-- <img src="https://via.placeholder.com/20" class="mr-2 " alt="Image"> -->
+                <i class="fas fa-spinner fa-spin"></i>
+                <strong class="mr-auto">Przygotowuję pobieranie</strong><small class="text-white">potrzebulę ok. 91s</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true" class="text-white">×</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Gotowe 1/5 plików
+            </div>
+        </div>
+    </div>
+    
+
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./bootstrap-4.0.0-dist/js/bootstrap.bundle.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="src/js/toast.js"></script>
+
+    <script>
+        const TYPES = ['info', 'warning', 'success', 'error'],
+            TITLES = {
+                'info': 'Informacja!',
+                'success': 'Udało się!',
+                'warning': 'Uwaga!',
+                'error': 'Bląd!'
+            },
+            CONTENT = {
+                'info': 'Gotowe 1/5 plików.',
+                'success': 'Sukces! Gotowe 5/5 plików.',
+                'warning': 'Czekaj, gotowe 3/5 plików',
+                'error': 'Co to? Gotowe 7/5 plików.'
+            },
+            POSITION = ['top-right', 'top-left', 'top-center', 'bottom-right', 'bottom-left', 'bottom-center'];
+    
+        $.toastDefaults.position = 'bottom-right';
+        $.toastDefaults.dismissible = true;
+        $.toastDefaults.stackable = true;
+        $.toastDefaults.pauseDelayOnHover = true;
+    
+        $('.snack').click(function () {
+            var type = TYPES[Math.floor(Math.random() * TYPES.length)],
+                content = CONTENT[type];
+    
+            $.snack(type, content);
+        });
+    
+        $('.toast-btn').click(function () {
+            var rng = Math.floor(Math.random() * 2) + 1,
+                type = TYPES[Math.floor(Math.random() * TYPES.length)],
+                title = TITLES[type],
+                content = CONTENT[type];
+    
+            if (rng === 1) {
+                $.toast({
+                    type: type,
+                    title: title,
+                    subtitle: '11 mins ago',
+                    content: content,
+                    delay: 7000
+                });
+            } else {
+                $.toast({
+                    type: type,
+                    title: title,
+                    subtitle: '11 mins ago',
+                    content: content,
+                    delay: 10000,
+                    img: {
+                        src: 'https://via.placeholder.com/20',
+                        alt: 'Image'
+                    }
+                });
+            }
+        });
+    </script>
+  </body>
+</html>
