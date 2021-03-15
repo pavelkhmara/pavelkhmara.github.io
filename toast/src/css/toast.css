@@ -71,3 +71,45 @@
 .toast-header > svg {
     margin-right: 10px;
 }
+
+.toast-container > .toast2 > .toast-border {
+    padding: 0;
+    border: 1px solid #eee;
+    border-left-width: .25rem;
+    border-radius: .25rem;
+}
+
+.toast-container > .toast2 > .toast-border-info {
+    border-left-color: #5bc0de;
+}
+
+.toast-container > .toast2 > .toast-border-success {
+    border-left-color: #28a745;
+}
+
+.toast-container > .toast2 > .toast-border-warning {
+    border-left-color: #ffc107;
+}
+
+.toast-container > .toast2 > .toast-border-error {
+    border-left-color: #dc3545;
+}
+
+.toast3 > .toast-body {
+    flex-grow: 2;
+    padding: 0;
+}
+
+.toast-infoblock {
+    padding: 1.2rem 0;
+    width: 5.5rem;
+}
+
+.toast-infoblock > .svg-inline--fa, .toast-infoblock > .fa-w-16 {
+    width: 3em;
+    height: 3em;
+}
+
+.flex-align-baseline {
+    align-items: baseline;
+}
