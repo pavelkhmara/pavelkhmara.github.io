@@ -1,0 +1,56 @@
+{
+  "events": [
+    {
+      "id": 123,
+      "category": "animal welfare",
+      "title": "Cat Adoption Day",
+      "description": "Find your new feline friend at this event.",
+      "location": "Meow Town",
+      "date": "January 28, 2022",
+      "time": "12:00",
+      "organizer": "Kat Laydee"
+    },
+    {
+      "id": 456,
+      "category": "food",
+      "title": "Community Gardening",
+      "description": "Join us as we tend to the community edible plants.",
+      "location": "Flora City",
+      "date": "March 14, 2022",
+      "time": "10:00",
+      "organizer": "Fern Pollin"
+    },
+    {
+      "id": 789,
+      "category": "sustainability",
+      "title": "Beach Cleanup",
+      "description": "Help pick up trash along the shore.",
+      "location": "Playa Del Carmen",
+      "date": "July 22, 2022",
+      "time": "11:00",
+      "organizer": "Carey Wales"
+    },
+    {
+      "id": 5957571,
+      "category": "food",
+      "title": "Wegetarian food",
+      "description": "Eat milk and fruits",
+      "location": "Scotland",
+      "date": "January 29, 2022",
+      "time": "07:00",
+      "petsAllowed": true,
+      "organizer": "John Dore"
+    },
+    {
+      "id": 7656601,
+      "category": "wooden furnitures",
+      "title": "Everiting for your flat",
+      "description": "Design renovation of your room",
+      "location": "NYC",
+      "date": "January 30, 2022",
+      "time": "10:00",
+      "petsAllowed": true,
+      "organizer": "Aristotelis"
+    }
+  ]
+}
